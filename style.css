@@ -19,45 +19,48 @@ body {
   src: url(./Fonts/Neue/NeueHaasDisplayLight.ttf);
 }
 
-.main{
-    height:100%;
-    width:100%;
+.main {
+  height: 100%;
+  width: 100%;
 }
 
 nav {
   position: fixed;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   height: 12vh;
   width: 100%;
-  padding: 2vw 10.4vw;
+  padding: 2vw 7.5vw;
   justify-content: space-between;
   background-color: #111;
-  z-index: 10;
+  z-index: 100;
 }
 
-nav h1 {
-  font-size: 1.6vw;
+nav svg {
   color: #fff;
-  font-family: neue;
   cursor: pointer;
+  width: 10%;
 }
 
 .nav-part2 {
   display: flex;
+  align-items: center;
   gap: 2vw;
-  align-items: flex-start;
   padding: 1vh 0;
   position: relative;
   z-index: 10;
 }
 
+/* .nav-elem{
+  display: none;
+} */
+
 .nav-part2 h4 {
-  font-size: .83vw;
+  font-size: 0.8vw;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 400;
-  margin-bottom: 2.6vw;
+  /* margin-bottom: 2.6vw; */
   color: #fff;
   font-family: neue;
 }
@@ -76,11 +79,12 @@ nav h1 {
 }
 
 nav button {
-  background-color: #0BA34E;
+  background-color: #0ba34e;
   display: flex;
   align-items: center;
   padding: 14px 20px;
-  font-size: 0.85vw;
+  font-size: 1vw;
+  color: white;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 50px;
@@ -89,8 +93,8 @@ nav button {
 }
 
 nav button svg {
-  height: 0.8vw;
-  margin-left: 1.6vw;
+  height: 1.3vw;
+  margin-left: 1.5vw;
 }
 
 #nav-bottom {
@@ -115,28 +119,33 @@ nav button svg {
   position: relative;
 }
 
+.page1-h1Container{
+  padding-top: 5vw;
+}
+
 #page1 h1 {
-  font-size: 8.5vw;
+  text-align: center;
+  font-size: 9.5vw;
   text-transform: uppercase;
   font-weight: 400;
-  line-height: 8.5vw;
+  line-height: 9vw;
   color: #fff;
   font-family: neue;
 }
 
 #page1 h1 svg {
-  height: 6vw;
+  height: 7vw;
   border-radius: 50%;
-  width: 6vw;
+  width: 7vw;
   cursor: pointer;
-  background-color: #0BA34E;
+  background-color: #0ba34e;
 }
 
 #page1 p {
   text-align: center;
   font-weight: 500;
   margin-top: 3vh;
-  font-size: 1vw;
+  font-size: 1.5vw;
   color: #fff;
   font-family: neue-light;
 }
@@ -149,7 +158,7 @@ nav button svg {
 
 #page1-something h4 {
   font-weight: 500;
-  font-size: 1vw;
+  font-size: 1.3vw;
   text-transform: lowercase;
   margin-top: 0.5vw;
   padding: 9px 18px;
@@ -174,7 +183,6 @@ nav button svg {
   padding: 1.2vw;
   overflow: hidden;
   width: 44%;
-
 }
 
 #moving-div .move {
@@ -192,13 +200,12 @@ nav button svg {
 
 @keyframes mobe {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
-
 }
 
 #blur-left {
