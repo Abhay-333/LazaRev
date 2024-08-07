@@ -304,6 +304,7 @@ nav button svg {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
   flex-direction: column;
   gap: 0.5vw;
 }
@@ -316,6 +317,20 @@ nav button svg {
   justify-content: space-between;
   padding: 2vw 1vw;
   border-top: 1px solid rgba(128, 128, 128, 0.459);
+  position: relative;      
+  z-index: 1;
+}
+
+.page2-right-elem img{
+  height:100px;
+  width:100px;
+  opacity: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .page2-right-elem:hover {
