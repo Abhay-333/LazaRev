@@ -66,36 +66,43 @@ nav svg {
 
 .nav-part2 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2vw;
   padding: 1vh 0;
   position: relative;
   z-index: 10;
+  /* margin-top: 10vh;  */
+  height: 3vh;
 }
 
 /* .nav-elem{
-  display: none;
+  
 } */
 
 .nav-part2 h4 {
-  font-size: 0.8vw;
+  font-size: 0.93vw;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: 400;
-  /* margin-bottom: 2.6vw; */
+  font-weight: 100;
+  margin-bottom: 2vw;
   color: #fff;
   font-family: NewDisplayBold;
 }
 
 .nav-part2 h5 {
-  margin-bottom: 1vw;
-  display: none;
+  font-family: neue-medium;
+  margin-top: 0.8vw;
+  color: white;
+  font-weight: 100;
+  /* display: none; */
   overflow: hidden;
+  /* transition: all ease-in-out 0.3s; */
+  /* background-color: red; */
 }
 
 .nav-part2 h5 span {
-  font-size: 0.77vw;
-  font-weight: 400;
+  font-size: 0.99vw;
+  font-weight: 100;
   transform: translateY(25px);
   display: inline-block;
 }
@@ -118,6 +125,19 @@ nav button svg {
   height: 1.3vw;
   margin-left: 1.5vw;
 }
+
+/* nav:hover #nav-bottom{
+  height: 180%;
+}
+
+nav:hover .nav-part2 h5{
+  display: block;
+  transform: translateY(-25px);
+}
+
+nav:hover .nav-part2 h5 span{
+  transform: translateY(0px);
+} */
 
 #nav-bottom {
   width: 85%;
