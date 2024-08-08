@@ -1,6 +1,9 @@
 const rightElems = document.querySelectorAll(".page2-right-elem");
 const page2Right = document.querySelector(".page2-right");
 const page2RightImg = document.querySelectorAll(".page2-right-elem img");
+const page3Video = document.querySelector(".page3 video");
+const play = document.querySelector(".play-btn");
+const nav = document.querySelector("nav");
 
 const page2Animation = () => {
   rightElems.forEach((e) => {
@@ -30,34 +33,30 @@ const page2Animation = () => {
 };
 
 page2Animation();
-const nav = document.querySelector("nav");
 
 function navAnimation() {
   nav.addEventListener("mouseenter", function () {
     let tl = gsap.timeline();
+    tl.to(
+      "#nav-bottom",
+      {
+        height: "21vh",
+        duration: 0.3,
+      },
+      "+=0"
+    );
 
-    tl.to(".nav-part2 h5", {
-      display: "block",
-    })
-      .to(
-        "#nav-bottom",
-        {
-          height: "21vh",
-          duration: 0.3,
+    tl.to(
+      ".nav-part2 h5 span",
+      {
+        y: 0,
+        stagger: {
+          amount: 0.2,
         },
-        "+=0"
-      )
-      .to(
-        ".nav-part2 h5 span",
-        {
-          y: 0,
-          stagger: {
-            amount: 0.2,
-          },
-          ease: "back.out",
-        },
-        "-=0"
-      );
+        ease: "back.out",
+      },
+      "+=0"
+    );
   });
 
   nav.addEventListener("mouseleave", function () {
@@ -69,22 +68,51 @@ function navAnimation() {
         duration: 0.3,
       },
       "+=0.1"
-    )
-      .to(
-        ".nav-part2 h5 span",
-        {
-          y: 25,
-          stagger: {
-            amount: 0.1,
-          },
-          ease: "back.out",
+    ).to(
+      ".nav-part2 h5 span",
+      {
+        y: 25,
+        stagger: {
+          amount: 0.1,
         },
-        "-=0.4"
-      )
-      .to(".nav-part2 h5", {
-        display: "none",
-      });
+        ease: "back.out",
+      },
+      "-=0.4"
+    );
+
+    tl.to(".nav-part2 h5", {});
   });
 }
 
 navAnimation();
+
+function page3Animation() {
+  play.addEventListener("click", function () {
+    page3Video.play();
+    gsap
+      .to(".page3 video", {
+        transform: "scaleX(1) scaleY(1)",
+        opacity: 1,
+        borderRadius: "0px",
+      })
+      
+    .to(play, {
+        opacity: 0,
+      });
+  });
+
+  page3Video.addEventListener("click", function () {
+    page3Video.pause();
+
+    gsap
+      .to(".page3 video", {
+        transform: "scaleX(0) scaleY(0)",
+        opacity: 0,
+      })
+      .to(play, {
+        opacity: 1,
+      });
+  });
+}
+
+page3Animation();

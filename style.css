@@ -387,7 +387,7 @@ nav:hover .nav-part2 h5 span{
   color: rgba(122, 122, 122, 0.904);
 }
 .page3 {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background-color: #111111;
   position: relative;
@@ -416,6 +416,17 @@ nav:hover .nav-part2 h5 span{
   width: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.page3 video{
+  position: absolute;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  transform: scaleX(0.7) scaleY(0);
+  border-radius: 30px;
+  opacity: 0;
+  z-index: 99999;
 }
 
 .page4 {
